@@ -96,7 +96,6 @@ keys = [
     Key([], "Print", lazy.spawn("flameshot gui"), desc='Screenshot'),
     Key(["control"], "Print", lazy.spawn("flameshot full -c -p ~/Pictures/"), desc='Screenshot'),
     Key([mod, "shift"], "h", lazy.layout.shuffle_left(), desc="Move window to the left"),
-    Key([mod, "control"], "w", lazy.spawn("feh --bg-fill $HOME/.config/qtile/Wallpaper/Skyscraper.png"), desc="Reload wallpaper"),
     Key([mod], "e", lazy.spawn(filemanager), desc="Open file manager")
 
 ]   
@@ -143,7 +142,7 @@ layouts = [
     layout.Floating( border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
 	    margin=4,
-	    border_width=0,
+	    border_width=3,
 	),
     # Try more layouts by unleashing below layouts
    #  layout.Stack(num_stacks=2),
@@ -151,21 +150,22 @@ layouts = [
      layout.Matrix(	border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
 	    margin=4,
-	    border_width=0,
+	    border_width=3,
 	),
      layout.MonadTall( border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
         margin=4,
-	    border_width=0,
+	    border_width=3,
 	),
     layout.MonadWide( border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
 	    margin=4,
-	    border_width=0,
+	    border_width=3,
 	),
-   #  layout.RatioTile(),
-     layout.Tile( border_focus='#00DC6C',
+    layout.Tile( border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
+        margin=4,
+        border_width=3,
     ),
    #  layout.TreeTab(),
    #  layout.VerticalTile(),
@@ -398,9 +398,9 @@ follow_mouse_focus = True
 bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
-	border_focus='#1F1D2E',
+	border_focus='#00DC6C',
 	border_normal='#1F1D2E',
-	border_width=0,
+	border_width=3,
     float_rules=[
         # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
