@@ -358,7 +358,7 @@ screens = [
 
                 widget.TextBox(
                     text="",
-                    font="JetBrains Mono Bold",
+                    font="IBM Plex Mono Bold",
                     fontsize=20,
                     padding=0,
                     background='#046f5f',
