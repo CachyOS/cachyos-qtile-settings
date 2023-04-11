@@ -78,7 +78,7 @@ keys = [
     Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-#    Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+#   Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
     Key([mod1], "Space", lazy.spawn("rofi -theme rounded-green-dark -show drun"), desc="Spawn a command using a prompt widget"),
 
 
@@ -128,9 +128,16 @@ for i in groups:
 ###𝙇𝙖𝙮𝙤𝙪𝙩###
 
 layouts = [
-    layout.Columns( margin=4, border_focus='#00DC6C',
+    layout.Columns( border_focus='#00DC6C',
 	    border_normal='#1F1D2E', 
-        border_width=3
+        border_width=3,
+        margin=4,
+    ),
+
+    layout.Zoomy( border_focus='#00DC6C',
+        border_normal='#1F1D2E',
+        margin=4,
+        border_width=3,
     ),
     
     layout.Max(	border_focus='#00DC6C',
@@ -144,15 +151,13 @@ layouts = [
 	    margin=4,
 	    border_width=3,
 	),
-    # Try more layouts by unleashing below layouts
-   #  layout.Stack(num_stacks=2),
-   #  layout.Bsp(),
-     layout.Matrix(	border_focus='#00DC6C',
+
+    layout.Matrix(	border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
 	    margin=4,
 	    border_width=3,
 	),
-     layout.MonadTall( border_focus='#00DC6C',
+    layout.MonadTall( border_focus='#00DC6C',
 	    border_normal='#1F1D2E',
         margin=4,
 	    border_width=3,
@@ -167,6 +172,10 @@ layouts = [
         margin=4,
         border_width=3,
     ),
+
+   # Try more layouts by uncommenting below layouts
+   #  layout.Stack(num_stacks=2),
+   #  layout.Bsp(),
    #  layout.TreeTab(),
    #  layout.VerticalTile(),
    #  layout.Zoomy(),
@@ -201,7 +210,6 @@ screens = [
                     background='#033C4B',
                 ),
 				
-
                 widget.Image(
                     filename='~/.config/qtile/Assets/launch_Icon.png',
                     margin=2,
@@ -252,8 +260,6 @@ screens = [
                     fontsize = 15,
                 ),
 
-
-
                 widget.Image(
                     filename='~/.config/qtile/Assets/5.png',                
                 ),
@@ -262,7 +268,6 @@ screens = [
                 widget.Image(
                     filename='~/.config/qtile/Assets/2.png',
                 ),
-
 
                 widget.WindowName(
                     background = '#046F5F',
@@ -298,17 +303,14 @@ screens = [
                     background='#52548D',
                 ),  
   
-
                 widget.Systray(
                     background='#046F5F',
                     fontsize=7,
                 ),
 
-
                 widget.Image(
                     filename='~/.config/qtile/Assets/5.png',
                 ),
-
 
                 widget.Image(
                     filename='~/.config/qtile/Assets/2.png',                
@@ -376,8 +378,7 @@ screens = [
                     length=18,
                     background='#046f5f',
                 ),
-
-                
+              
             ],
             30,
             margin = [6,6,6,6]
