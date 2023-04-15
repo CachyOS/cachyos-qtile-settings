@@ -206,7 +206,7 @@ screens = [
     Screen(
         top=bar.Bar(
             [
-				widget.Spacer(length=20,
+				widget.Spacer(length=15,
                     background='#033C4B',
                 ),
 				
@@ -222,7 +222,7 @@ screens = [
                 ),
 
                 widget.GroupBox(
-                    fontsize=16,
+                    fontsize=19,
                     borderwidth=3,
                     highlight_method='block',
                     active='#56D9C7', #Active workspaces circle color
@@ -375,7 +375,7 @@ screens = [
                 ),
 
                 widget.Spacer(
-                    length=18,
+                    length=15,
                     background='#046f5f',
                 ),
               
