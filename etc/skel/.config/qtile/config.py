@@ -104,7 +104,7 @@ keys = [
 # █▄█ █▀▄ █▄█ █▄█ █▀▀ ▄█
 
 
-groups = [Group(f"{i+1}", label="") for i in range(9)]
+groups = [Group(f"{i+1}", label="⬤") for i in range(9)]
 
 for i in groups:
     keys.extend(
