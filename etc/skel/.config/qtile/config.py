@@ -125,54 +125,41 @@ for i in groups:
 ###𝙇𝙖𝙮𝙤𝙪𝙩###
 
 layouts = [
-    layout.Columns( border_focus='#00DC6C',
-	    border_normal='#1F1D2E', 
-        border_width=3,
-        margin=4,
-    ),
-
-    layout.Zoomy( border_focus='#00DC6C',
-        border_normal='#1F1D2E',
-        margin=4,
-        border_width=3,
+    layout.Columns( margin = 0, border_focus = '#00DC6C',
+        border_normal = '#1F1D2E', 
+        border_width = 3,
     ),
     
-    layout.Max(	border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-	    margin=4,
-	    border_width=0,
+    layout.Max( border_focus = '#00DC6C',
+        border_normal = '#1F1D2E',
+        margin = 4,
+        border_width = 0,
     ),
     
-    layout.Floating( border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-	    margin=4,
-	    border_width=3,
-	),
-
-    layout.Matrix(	border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-	    margin=4,
-	    border_width=3,
-	),
-    layout.MonadTall( border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-        margin=4,
-	    border_width=3,
-	),
-    layout.MonadWide( border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-	    margin=4,
-	    border_width=3,
-	),
-    layout.Tile( border_focus='#00DC6C',
-	    border_normal='#1F1D2E',
-        margin=4,
-        border_width=3,
+    layout.Floating( border_focus = '#00DC6C',
+        border_normal = '#1F1D2E',
+        margin = 4,
+        border_width = 3,
     ),
-
-   # Try more layouts by uncommenting below layouts
+    # Try more layouts by unleashing below layouts
    #  layout.Stack(num_stacks=2),
    #  layout.Bsp(),
+     layout.Matrix( border_focus = '#00DC6C',
+        border_normal = '#1F1D2E',
+        margin = 4,
+        border_width = 3,
+    ),
+     
+    layout.MonadWide( border_focus = '#00DC6C',
+        border_normal = '#1F1D2E',
+        margin = 4,
+        border_width = 3,
+    ),
+    layout.Tile( border_focus = '#00DC6C',
+        border_normal = '#1F1D2E',
+        margin = 4,
+        border_width = 3,
+    ),
    #  layout.TreeTab(),
    #  layout.VerticalTile(),
    #  layout.Zoomy(),
@@ -181,9 +168,9 @@ layouts = [
 
 
 widget_defaults = dict(
-    font="sans",
-    fontsize=12,
-    padding=4,
+    font = "sans",
+    fontsize = 12,
+    padding = 4,
 )
 extension_defaults = [ widget_defaults.copy()]
 
@@ -199,186 +186,200 @@ def open_btop():
 # █▄█ █▀█ █▀▄
  
 screens = [
-
     Screen(
         top=bar.Bar(
-            [
-				widget.Spacer(length=15,
-                    background='#033C4B',
+            [   
+                widget.Spacer(length = 20,
+                    background = '#033C4B',
                 ),
-				
+                
                 widget.Image(
-                    filename='~/.config/qtile/Assets/launch_Icon.png',
-                    margin=2,
-                    background='#033C4B',
-                    mouse_callbacks= {'Button1': open_launcher}
+                    filename = '~/.config/qtile/Assets/launch_Icon.png',
+                    margin = 2,
+                    background = '#033C4B',
+                    mouse_callbacks = {'Button1': open_launcher}
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/6.png',
+                    filename = '~/.config/qtile/Assets/6.png',
                 ),
 
                 widget.GroupBox(
-                    fontsize=19,
-                    borderwidth=3,
-                    highlight_method='block',
-                    active='#56D9C7', #Active workspaces circle color
-                    block_highlight_text_color="#00F076", #Current workspace circle color
-                    highlight_color='#4B427E',
-                    inactive='#052A25', #Empty workspace circle
-                    foreground='#046F5F',
-                    background='#046F5F',
-                    this_current_screen_border='#00361A', #Circle background color
-                    this_screen_border='#52548D',
-                    other_current_screen_border='#52548D',
-                    other_screen_border='#52548D',
-                    urgent_border='#52548D',
-                    rounded=True,
-                    disable_drag=True,
+                    fontsize = 16,
+                    borderwidth = 3,
+                    highlight_method = 'block',
+                    active = '#56D9C7', #Active workspaces circle color
+                    block_highlight_text_color = "#00F076", #Current workspace circle color
+                    highlight_color = '#4B427E',
+                    inactive = '#052A25', #Empty workspace circle
+                    foreground = '#046F5F',
+                    background = '#046F5F',
+                    this_current_screen_border = '#00361A', #Circle background color
+                    this_screen_border = '#52548D',
+                    other_current_screen_border = '#52548D',
+                    other_screen_border = '#52548D',
+                    urgent_border = '#52548D',
+                    rounded = True,
+                    disable_drag = True,
                  ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',
+                    filename = '~/.config/qtile/Assets/5.png',
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/2.png',
+                    filename = '~/.config/qtile/Assets/2.png',
                 ),
 
                 widget.CurrentLayoutIcon(
-                    background='#046F5F',
+                    background = '#046F5F',
                     padding = 0,
                     scale = 0.5,
                 ),
 
                     widget.CurrentLayout(
-                    background='#046F5F',
-                    font= 'IBM Plex Sans Medium',
+                    background ='#046F5F',
+                    font = 'IBM Plex Sans Medium',
                     fontsize = 15,
                 ),
 
+
+
                 widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',                
+                    filename = '~/.config/qtile/Assets/5.png',                
                 ),
 
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/2.png',
+                    filename = '~/.config/qtile/Assets/2.png',
                 ),
+
 
                 widget.WindowName(
                     background = '#046F5F',
                     format = "{name}",
-                    font='IBM Plex Sans Medium',
+                    font = 'IBM Plex Sans Medium',
                     fontsize = 15,
                     empty_group_string = 'Desktop',
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',                
+                    filename = '~/.config/qtile/Assets/5.png',                
                 ),  
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/1.png',                
-                    background='#52548D',
+                    filename = '~/.config/qtile/Assets/1.png',                
+                    background = '#52548D',
+                ),
+
+                widget.TextBox(
+                    text ="",
+                    font ="Font Awesome 6 Free Solid",
+                    fontsize = 20,
+                    padding = 6,
+                    background = '#046F5F',
+                    mouse_callbacks = {'Button1': open_btop},
                 ),    
 
                 widget.CPU(
-                    font="IBM Plex Sans Medium",
-                    fontsize=15,
-                    padding=10,
-                    background='#046F5F',
-                    mouse_callbacks= {'Button1': open_btop},
+                    font = "IBM Plex Sans Medium",
+                    fontsize = 15,
+                    padding = 2,
+                    background = '#046F5F',
+                    mouse_callbacks = {'Button1': open_btop},
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',
+                    filename = '~/.config/qtile/Assets/5.png',
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/2.png',                
-                    background='#52548D',
+                    filename = '~/.config/qtile/Assets/2.png',                
+                    background = '#52548D',
                 ),  
   
+
                 widget.Systray(
-                    background='#046F5F',
-                    fontsize=7,
+                    background = '#046F5F',
+                    fontsize = 7,
                 ),
 
-                widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',
-                ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/2.png',                
-                    background='#52548D',
+                    filename = '~/.config/qtile/Assets/5.png',
+                ),
+
+
+                widget.Image(
+                    filename = '~/.config/qtile/Assets/2.png',                
+                    background = '#52548D',
                 ),                       
                                                 
                 widget.TextBox(
-                    text="﬙",
-                    font="Font Awesome 6 Free Solid",
-                    fontsize=20,
-                    padding=6,
-                    background='#046F5F',
-                    mouse_callbacks= {'Button1': open_btop},
+                    text = "",
+                    font = "Font Awesome 6 Free Solid",
+                    fontsize = 20,
+                    padding = 2,
+                    background = '#046F5F',
+                    mouse_callbacks = {'Button1': open_btop},
                 ),
                
-                widget.Memory(format='{MemUsed: .0f}{mm}',
-                    font="IBM Plex Sans Medium",
-                    fontsize=15,
-                    padding=1,
-                    background='#046F5F',
-                    mouse_callbacks= {'Button1': open_btop},
+                widget.Memory(format = '{MemUsed: .0f}{mm}',
+                    font = "IBM Plex Sans Medium",
+                    fontsize = 15,
+                    padding = 2,
+                    background = '#046F5F',
+                    mouse_callbacks = {'Button1': open_btop},
                 ),
 
                 widget.TextBox(
-                    text="",
-                    font="Font Awesome 6 Free Solid",
-                    fontsize=12,
-                    padding=6,
-                    background='#046F5F',
+                    text = "",
+                    font = "Font Awesome 6 Free Solid",
+                    fontsize = 16,
+                    padding = 6,
+                    background = '#046F5F',
                 ),
                 
-                widget.PulseVolume(font='IBM Plex Sans Medium',
-                    fontsize=15,
-                    padding=2,
-                    background='#046F5F',
+                widget.PulseVolume(font= 'IBM Plex Sans Medium',
+                    fontsize = 15,
+                    padding = 2,
+                    background = '#046F5F',
                 ),
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/5.png',
+                    filename = '~/.config/qtile/Assets/5.png',
                 ),                
 
 
                 widget.Image(
-                    filename='~/.config/qtile/Assets/1.png',                
-                    background='#4B427E',
+                    filename = '~/.config/qtile/Assets/1.png',                
+                    background = '#4B427E',
                 ),
 
                 widget.TextBox(
-                    text="",
-                    font="IBM Plex Mono Bold",
-                    fontsize=20,
-                    padding=0,
-                    background='#046f5f',
+                    text = "",
+                    font = "Font Awesome 6 Free Solid",
+                    fontsize = 20,
+                    padding = 8,
+                    background = '#046f5f',
                 ),
         
                 widget.Clock(
-                    format='  %H:%M:%S %p',
-                    background='#046f5f',
-                    font="IBM Plex Sans Medium",
+                    format = '%d/%m/%y %H:%M', #Here you can change between USA or another timezone
+                    background = '#046f5f',
+                    font = "IBM Plex Sans Medium",
                     fontsize = 15,
-                    padding=0,
+                    padding = 0,
                 ),
 
                 widget.Spacer(
-                    length=15,
-                    background='#046f5f',
+                    length = 18,
+                    background = '#046f5f',
                 ),
-              
+                
             ],
-            30, #Overall bar size
-            margin = [6,6,6,6]  #Global margin
+            30,  #Overall bar size
+            margin = [1,1,1,1] #Global margin
         ),
     ),
 ]
