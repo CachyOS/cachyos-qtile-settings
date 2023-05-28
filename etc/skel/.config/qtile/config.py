@@ -32,7 +32,7 @@ from libqtile.dgroups import simple_key_binder
 
 
 mod = "mod4" #aka Windows key
-terminal = "alacritty"
+terminal = "alacritty" #This is an example on how flexible Qtile is, you create variables then use them in a keybind for example (see below)
 mod1 = "mod1" #alt key
 filemanager = "thunar"
 
@@ -101,7 +101,7 @@ keys = [
 # █▄█ █▀▄ █▄█ █▄█ █▀▀ ▄█
 
 
-groups = [Group(f"{i+1}", label="⬤") for i in range(9)]
+groups = [Group(f"{i+1}", label="⬤") for i in range(9)] #Be careful modifying this, otherwise qtile config will break
 
 for i in groups:
     keys.extend(
@@ -398,7 +398,7 @@ screens = [
                     background = '#046f5f',
                 ),
             ],
-            30,  # Bar size
+            30,  # Bar size (all axis)
             margin = [6,6,6,6] # Bar margin (Top,Right,Bottom,Left)
         ),
     ),
@@ -415,7 +415,7 @@ dgroups_key_binder = None
 dgroups_app_rules = []  # type: list
 follow_mouse_focus = True
 bring_front_click = False
-cursor_warp = False
+cursor_warp = False #This basically puts your mouse in the center on the screen after you switch to another workspace
 floating_layout = layout.Floating(
 	border_focus='#00DC6C',
 	border_normal='#1F1D2E',
