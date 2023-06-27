@@ -135,14 +135,14 @@ layouts = [
     layout.Max(
         border_focus = '#00DC6C',
         border_normal = '#1F1D2E',
-        margin = 4,
+        margin = 0,
         border_width = 0,
     ),
     
     layout.Floating(
         border_focus = '#00DC6C',
         border_normal = '#1F1D2E',
-        margin = 4,
+        margin = 0,
         border_width = 3,
     ),
     # Try more layouts by unleashing below layouts
@@ -151,20 +151,20 @@ layouts = [
      layout.Matrix(
         border_focus = '#00DC6C',
         border_normal = '#1F1D2E',
-        margin = 4,
+        margin = 0,
         border_width = 3,
     ),
      
     layout.MonadWide(
         border_focus = '#00DC6C',
         border_normal = '#1F1D2E',
-        margin = 4,
+        margin = 0,
         border_width = 3,
     ),
     layout.Tile(
         border_focus = '#00DC6C',
         border_normal = '#1F1D2E',
-        margin = 4,
+        margin = 0,
         border_width = 3,
     ),
    #  layout.TreeTab(),
@@ -196,13 +196,12 @@ screens = [
         top = bar.Bar(
             [   
                 widget.Spacer(
-                    length = 20,
+                    length = 18,
                     background = '#033C4B',
                 ),
                 
                 widget.Image(
                     filename = '~/.config/qtile/Assets/launch_Icon.png',
-                    margin = 2,
                     background = '#033C4B',
                     mouse_callbacks = {'Button1': open_launcher},
                 ),
@@ -213,7 +212,7 @@ screens = [
 
                 widget.GroupBox(
                     fontsize = 16,
-                    borderwidth = 3,
+                    borderwidth = 0,
                     highlight_method = 'block',
                     active = '#56D9C7', #Active workspaces circle color
                     block_highlight_text_color = "#00F076", #Current workspace circle color
@@ -246,8 +245,9 @@ screens = [
 
                 widget.CurrentLayout(
                     background ='#046F5F',
-                    font = 'IBM Plex Sans Medium',
+                    font = 'IBM Plex Mono Medium',
                     fontsize = 15,
+                    padding = 0,
                 ),
 
                 widget.Image(
@@ -261,9 +261,10 @@ screens = [
                 widget.WindowName(
                     background = '#046F5F',
                     format = "{name}",
-                    font = 'IBM Plex Sans Medium',
-                    fontsize = 15,
+                    font = 'IBM Plex Mono Medium',
+                    fontsize = 14,
                     empty_group_string = 'Desktop',
+                    padding = 0,
                 ),
 
                 widget.Image(
@@ -275,18 +276,12 @@ screens = [
                     background = '#52548D',
                 ),
 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/microchip-solid-white-big.png',
-                    background = '#046F5F',
-                    margin = 5,
-                    scale = True,
-                    mouse_callbacks = {'Button1': open_btop},
-                ),
-
                 widget.CPU(
-                    font = "IBM Plex Sans Medium",
+                    font = "IBM Plex Mono Medium",
+                    format='CPU:({load_percent:.1f}%/{freq_current}GHz)',
                     fontsize = 15,
-                    padding = 2,
+                    margin = 0,
+                    padding = 0,
                     background = '#046F5F',
                     mouse_callbacks = {'Button1': open_btop},
                 ),
@@ -302,7 +297,8 @@ screens = [
   
                 widget.Systray(
                     background = '#046F5F',
-                    fontsize = 7,
+                    icon_size = 24,
+                    padding = 3,
                 ),
 
                 widget.Image(
@@ -314,24 +310,16 @@ screens = [
                     background = '#52548D',
                 ),                    
                                                 
-                widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/memory-solid-big.png',
-                    background = '#046F5F',
-                    margin_y = 3.5,
-                    scale = True,
-                    mouse_callbacks = {'Button1': open_btop},
-                ),
-
                 widget.Spacer(
-                    length = 2,
+                    length = 0,
                     background = '#046f5f',
                 ),  
                
                 widget.Memory(
-                    format = '{MemUsed: .0f}{mm}',
-                    font = "IBM Plex Sans Medium",
+                    format = 'RAM:({MemUsed:.0f}MB/{MemTotal:.0f}MB)',
+                    font = "IBM Plex Mono Medium",
                     fontsize = 15,
-                    padding = 2,
+                    padding = 0,
                     background = '#046F5F',
                     mouse_callbacks = {'Button1': open_btop},
                 ),
@@ -342,7 +330,7 @@ screens = [
                 ),  
 
                 widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/volume-high-solid.png',
+                    filename = '~/.config/qtile/Assets/Bar-Icons/volume.svg',
                     background = '#046F5F',
                     margin_y = 3,
                     scale = True,
@@ -355,9 +343,9 @@ screens = [
                 ), 
                 
                 widget.PulseVolume(
-                    font= 'IBM Plex Sans Medium',
+                    font= 'IBM Plex Mono Medium',
                     fontsize = 15,
-                    padding = 3,
+                    padding = 0,
                     background = '#046F5F',
                     device = 'default',
                 ),
@@ -373,22 +361,37 @@ screens = [
                 ),
 
                 widget.Image(
-                    filename = '~/.config/qtile/Assets/Bar-Icons/calendar-check-solid.png',
+                    filename = '~/.config/qtile/Assets/Bar-Icons/calendar.svg',
                     background = '#046F5F',
-                    margin_y = 5,
+                    margin_y = 3,
                     scale = True,
-                    mouse_callbacks = {'Button1': open_btop},
                 ),
 
                 widget.Spacer(
-                    length = 8,
+                    length = 6,
                     background = '#046f5f',
                 ), 
         
                 widget.Clock(
-                    format = '%d/%m/%y %H:%M', #Here you can change between USA or another timezone
+                    format = '%d/%m/%y ', #Here you can change between USA or another timezone
                     background = '#046f5f',
-                    font = "IBM Plex Sans Medium",
+                    font = "IBM Plex Mono Medium",
+                    fontsize = 15,
+                    padding = 0,
+                ),
+
+                widget.Image(
+                    filename = '~/.config/qtile/Assets/Bar-Icons/clock.svg',
+                    background = '#046F5F',
+                    margin_y = 3,
+                    margin_x = 5,
+                    scale = True,
+                ),
+
+                widget.Clock(
+                    format = '%H:%M', 
+                    background = '#046f5f',
+                    font = "IBM Plex Mono Medium",
                     fontsize = 15,
                     padding = 0,
                 ),
@@ -399,7 +402,7 @@ screens = [
                 ),
             ],
             30,  # Bar size (all axis)
-            margin = [6,6,6,6] # Bar margin (Top,Right,Bottom,Left)
+            margin = [0,8,6,8] # Bar margin (Top,Right,Bottom,Left)
         ),
     ),
 ]
