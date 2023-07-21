@@ -347,7 +347,6 @@ screens = [
                     fontsize = 15,
                     padding = 0,
                     background = '#046F5F',
-                    device = 'default',
                 ),
 
                 widget.Image(
