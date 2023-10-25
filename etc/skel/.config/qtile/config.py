@@ -239,7 +239,7 @@ screens = [
 
                 widget.CurrentLayoutIcon(
                     background = '#046F5F',
-                    padding = 0,
+                    padding = 4,
                     scale = 0.5,
                 ),
 
