@@ -1,12 +1,12 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
 Name=vimix-dark-beryl
-Comment=An Clean Gtk+ theme based on Material Design
+Comment=Clean Gtk+ theme based on Material Design
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
 GtkTheme=vimix-dark-beryl
 MetacityTheme=vimix-dark-beryl
-IconTheme=Adwaita
-CursorTheme=Adwaita
+IconTheme=vimix-beryl-dark
+CursorTheme=vimix-beryl-dark
 ButtonLayout=menu:minimize,maximize,close

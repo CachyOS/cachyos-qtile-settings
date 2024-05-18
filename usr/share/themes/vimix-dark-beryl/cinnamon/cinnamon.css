@@ -159,7 +159,7 @@ stage {
 #menu-search-entry:insensitive, .menu #notification StEntry:insensitive, .popup-menu #notification StEntry:insensitive {
   border-color: transparent;
   color: rgba(255, 255, 255, 0.45);
-  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.15);
 }
 
 #menu-search-entry, .menu #notification StEntry, .popup-menu #notification StEntry, .menu #notification StEntry:focus, .popup-menu #notification StEntry:focus, .menu #notification StEntry:hover, .popup-menu #notification StEntry:hover, .menu #notification StEntry:insensitive, .popup-menu #notification StEntry:insensitive {
@@ -199,7 +199,7 @@ stage {
   border-color: transparent;
   background-color: rgba(255, 255, 255, 0.05);
   color: rgba(255, 255, 255, 0.45);
-  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.15);
 }
 
 StScrollView.vfade {
@@ -323,18 +323,18 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .cinnamon-link {
   border-radius: 2px;
-  color: #2EB398;
+  color: #0fd1ab;
   text-decoration: underline;
 }
 
 .cinnamon-link:hover {
-  color: #2EB398;
-  background-color: rgba(46, 179, 152, 0.12);
+  color: #0fd1ab;
+  background-color: rgba(15, 209, 171, 0.12);
 }
 
 .cinnamon-link:active {
-  color: #2EB398;
-  background-color: rgba(46, 179, 152, 0.25);
+  color: #0fd1ab;
+  background-color: rgba(15, 209, 171, 0.25);
 }
 
 #Tooltip {
@@ -532,8 +532,8 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 #panelRight:dnd,
 .panelRight:dnd {
   background-gradient-direction: vertical;
-  background-gradient-start: rgba(46, 179, 152, 0.4);
-  background-gradient-end: rgba(46, 179, 152, 0.4);
+  background-gradient-start: rgba(15, 209, 171, 0.4);
+  background-gradient-end: rgba(15, 209, 171, 0.4);
 }
 
 #panelRight:ltr,
@@ -938,7 +938,7 @@ StScrollBar StButton#vhandle:active, StScrollBar StButton#hhandle:active {
 
 .calendar-day-with-events {
   background-image: none;
-  color: #2EB398;
+  color: #0fd1ab;
   font-weight: 400;
   text-decoration: underline;
 }
