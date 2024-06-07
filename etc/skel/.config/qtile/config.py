@@ -36,6 +36,39 @@ terminal = "alacritty" #This is an example on how flexible Qtile is, you create 
 mod1 = "mod1" #alt key
 filemanager = "thunar"
 
+# Sticky windows
+
+sticky_windows = []
+
+@lazy.function
+def toggle_sticky_windows(qtile, window=None):
+    if window is None:
+        window = qtile.current_screen.group.current_window
+    if window in sticky_windows:
+        sticky_windows.remove(window)
+    else:
+        sticky_windows.append(window)
+    return window
+
+@hook.subscribe.setgroup
+def move_sticky_windows():
+    for window in sticky_windows:
+        window.togroup()
+    return
+
+@hook.subscribe.client_killed
+def remove_sticky_windows(window):
+    if window in sticky_windows:
+        sticky_windows.remove(window)
+
+# Below is an example how to make Firefox Picture-in-Picture windows automatically sticky.
+@hook.subscribe.client_managed
+def auto_sticky_windows(window):
+    info = window.info()
+    if (info['wm_class'] == ['Toolkit', 'firefox']
+            and info['name'] == 'Picture-in-Picture'):
+        sticky_windows.append(window)
+
 # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄ █▀
 # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀ ▄█
 
@@ -43,6 +76,10 @@ keys = [
     # A list of available commands that can be bound to keys can be found
     # at https://docs.qtile.org/en/latest/manual/config/lazy.html
     # Switch between windows
+    Key([mod], "Left", lazy.layout.left(), desc="Move focus to left"),
+    Key([mod], "Right", lazy.layout.right(), desc="Move focus to right"),
+    Key([mod], "Down", lazy.layout.down(), desc="Move focus down"),
+    Key([mod], "Up", lazy.layout.up(), desc="Move focus up"),
     Key([mod], "h", lazy.layout.left(), desc="Move focus to left"),
     Key([mod], "l", lazy.layout.right(), desc="Move focus to right"),
     Key([mod], "j", lazy.layout.down(), desc="Move focus down"),
@@ -94,8 +131,8 @@ keys = [
 ##Misc keybinds
     Key([], "Print", lazy.spawn("flameshot gui"), desc='Screenshot'),
     Key(["control"], "Print", lazy.spawn("flameshot full -c -p ~/Pictures/"), desc='Screenshot'),
-    Key([mod], "e", lazy.spawn(filemanager), desc="Open file manager")
-
+    Key([mod], "e", lazy.spawn(filemanager), desc="Open file manager"),
+    Key([mod], "s",toggle_sticky_windows(), desc="Toggle state of sticky for current window"),
 ]   
 
 # █▀▀ █▀█ █▀█ █░█ █▀█ █▀
