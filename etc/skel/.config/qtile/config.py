@@ -441,6 +441,8 @@ screens = [
             30,  # Bar size (all axis)
             margin = [0,8,6,8] # Bar margin (Top,Right,Bottom,Left)
         ),
+        wallpaper='~/.config/qtile/Wallpaper/Skyscraper.png',
+        wallpaper_mode="fill",
     ),
 ]
 
