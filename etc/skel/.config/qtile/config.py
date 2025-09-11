@@ -274,13 +274,7 @@ screens = [
                 widget.Image(
                     filename = '~/.config/qtile/Assets/2.png',
                 ),
-
-                widget.CurrentLayoutIcon(
-                    background = '#046F5F',
-                    padding = 4,
-                    scale = 0.5,
-                ),
-
+                
                 widget.CurrentLayout(
                     background ='#046F5F',
                     font = 'IBM Plex Mono Medium',
