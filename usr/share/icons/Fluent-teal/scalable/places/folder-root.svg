@@ -5,7 +5,7 @@
  <path d="m8.4671 4.2316c-0.293 0-0.38216 0.27564-0.52916 0.52863l-0.31006 0.53122h-6.5701c-0.29308 0-0.52863 0.23609-0.52863 0.52916v8.4671c0 0.29308 0.23557 0.52863 0.52863 0.52863h14.818c0.29308 0 0.52863-0.23454 0.52863-0.5276v-9.5249c0-0.294-0.23564-0.53226-0.52863-0.53226z" fill="#32c8ba" opacity=".8" style="paint-order:markers stroke fill"/>
  <rect x="3.704" y="2.64" width="3.175" height=".529" ry=".265" opacity=".25" paint-order="stroke markers fill"/>
  <g class="ColorScheme-Text" transform="matrix(.39687 0 0 .39687 9.2602 7.5404)" fill="#ffffff" stroke-width=".66667">
-  <path d="m10 2.3333h-2l-6 12h2z"/>
-  <rect x="8" y="13" width="6" height="1.3333"/>
+  <path d="m10 2.3333h-2l-6 12h2z" opacity=".75"/>
+  <rect x="8" y="13" width="6" height="1.3333" opacity=".75"/>
  </g>
 </svg>

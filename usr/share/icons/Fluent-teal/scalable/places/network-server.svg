@@ -4,9 +4,9 @@
    <feGaussianBlur stdDeviation="1.4534"/>
   </filter>
  </defs>
- <rect x="5" y="8" width="54" height="48" ry="2.087" fill="#198ee6" opacity=".6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5183" style="paint-order:stroke fill markers"/>
+ <rect x="5" y="8" width="54" height="48" ry="2.087" fill="#32c8ba" opacity=".6" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5183" style="paint-order:stroke fill markers"/>
  <rect x="9" y="12" width="46" height="40" ry="1.7391" fill="#ffffff" filter="url(#filter1451)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.2792" style="paint-order:stroke fill markers"/>
- <rect x="5" y="8" width="54" height="48" ry="2.087" fill="#198ee6" opacity=".8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5183" style="paint-order:stroke fill markers"/>
+ <rect x="5" y="8" width="54" height="48" ry="2.087" fill="#32c8ba" opacity=".8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5183" style="paint-order:stroke fill markers"/>
  <path d="m12 16h24v2h-24z" fill="#ffffff"/>
  <circle cx="43" cy="17" r="2" fill="#ffffff"/>
  <circle cx="51" cy="17" r="2" fill="#ffffff"/>
