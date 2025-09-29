@@ -216,7 +216,8 @@ widget_defaults = dict(
     fontsize = 12,
     padding = 4,
 )
-extension_defaults = [ widget_defaults.copy()]
+
+extension_defaults = widget_defaults.copy()
 
 
 def open_launcher():
